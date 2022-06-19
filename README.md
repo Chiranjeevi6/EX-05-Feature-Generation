@@ -22,11 +22,17 @@ Save the data to the file
 # CODE
 
 import pandas as pd
+
 df=pd.read_csv("data.csv")
+
 df
+
 #feature generation
+
 import category_encoders as ce
+
 be=ce.BinaryEncoder()
+
 ndf=be.fit_transform(df["bin_1"])
 df["bin_1"] = be.fit_transform(df["bin_1"])
 ndf
